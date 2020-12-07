@@ -57,4 +57,4 @@ class FlightTest(TestCase):
     def test_index_context(self):
         c=Client()
         response=c.get("/flights/")
-        self.assertEqual(response.context["flights"].count(),3)
+        self.assertEqual(response.context["flights"].count(),2)

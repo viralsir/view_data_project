@@ -27,7 +27,7 @@ class flight(models.Model):
         return f"Flight ( {self.origin} to {self.destion})";
 
     def is_valid_flight(self):
-        return self.origin != self.destion and self.duration>0 ;
+        return self.origin != self.destion or self.duration>0 ;
 
 
 class Pasenengers(models.Model):
