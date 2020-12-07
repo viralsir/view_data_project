@@ -1,0 +1,36 @@
+{% extends "student/layout.html" %}
+{% block script %}
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable( {
+                "ajax": "jsonview",
+                "type":'json',
+                "columns": [
+                            { "data": "sname" },
+                            { "data": "maths" },
+                            { "data": "sci" },
+                            { "data": "eng" },
+
+                        ]
+    });
+}       );
+    </script>
+{% endblock %}
+{% block body %}
+    <table id="example"  >
+        <thead >
+            <tr>
+                <th>Name </th>
+                <th> Maths</th>
+                <th> Science</th>
+                <th> English</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+
+{% endblock %}
